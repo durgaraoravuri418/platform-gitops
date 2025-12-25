@@ -9,6 +9,8 @@ spec:
     repoURL: https://github.com/durgaraoravuri418/eks-app
     targetRevision: master
     path: .
+    valuesFiles:
+      - apps/eks-app/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: my-app-dev
