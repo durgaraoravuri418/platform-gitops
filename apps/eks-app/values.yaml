@@ -1,0 +1,5 @@
+image:
+  repository: durgarao418/spring-app
+  tag: "v8"
+service:
+  type: Loadbalancer
