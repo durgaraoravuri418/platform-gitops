@@ -1,6 +1,6 @@
 image:
-  repository: durgarao418/spring-app
-  tag: "v8"
+  repository: durgarao418/eks-app
+  tag: "0.0.1-SNAPSHOT"
 service:
   type: LoadBalancer
 
