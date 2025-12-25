@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/durgaraoravuri418/helm-charts
+    repoURL: https://github.com/durgaraoravuri418/eks-app
     targetRevision: master
-    chart: my-app
+    chart: eks-app
   destination:
     server: https://kubernetes.default.svc
     namespace: my-app-dev
