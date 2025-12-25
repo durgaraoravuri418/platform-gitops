@@ -5,16 +5,26 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/durgaraoravuri418/eks-app
+
+  sources:
+
+  # 🔹 Source-1 → Helm chart (templates)
+  - repoURL: https://github.com/durgaraoravuri418/eks-app
     targetRevision: master
     path: .
     helm:
       valueFiles:
-        - apps/eks-app/values.yaml
+        - $values/apps/eks-app/values.yaml   # <-- reference values from 2nd source
+
+  # 🔹 Source-2 → GitOps repo (values only)
+  - repoURL: https://github.com/durgaraoravuri418/platform-gitops
+    targetRevision: master
+    ref: values   # <-- mark as values source (NO Chart.yaml expected)
+
   destination:
     server: https://kubernetes.default.svc
     namespace: my-app-dev
+
   syncPolicy:
     automated:
       prune: true
