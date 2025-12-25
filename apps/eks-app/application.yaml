@@ -10,7 +10,7 @@ spec:
     targetRevision: master
     path: .
     helm:
-      valuesFiles:
+      valueFiles:
         - apps/eks-app/values.yaml
   destination:
     server: https://kubernetes.default.svc
@@ -19,9 +19,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-- group: apps
-  kind: Deployment
-  jsonPointers:
-    - /spec/template/spec/containers/0/livenessProbe
-    - /spec/template/spec/containers/0/readinessProbe
