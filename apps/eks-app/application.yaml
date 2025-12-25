@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/helm-charts
+    repoURL: https://github.com/durgaraoravuri418/helm-charts
     targetRevision: master
     chart: my-app
   destination:
