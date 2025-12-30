@@ -1,6 +1,6 @@
 image:
   repository: durgarao418/eks-app
-  tag: "0.0.1-SNAPSHOT"
+  tag: "0.0.2-SNAPSHOT"
 service:
   type: LoadBalancer
 
